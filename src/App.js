@@ -7,7 +7,7 @@ import TestErrorBoundary from "./TestErrorBoundary";
 function Home() {
   return (
     <section className="home-container">
-      <h1> HOME PAGE</h1>
+      <h1> HOME PAGE </h1>
 
       <div className="info-box">
         <h2>
