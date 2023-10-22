@@ -1,3 +1,12 @@
+LIBRARIES INSTALLED/USED FOR MY PROJECT
+REACT
+REACT ROUTER / REACT ROUTER DOM
+CSS modules
+Styled-components
+Webpack
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
