@@ -101,13 +101,13 @@ const CounterApp = () => {
 
         <div className="mid-container">
           <div className="value-container">
-            <label htmlFor="countInput">Set value:</label>
+            <label htmlFor="countInput">Value:</label>
             <input
               type="number"
               id="countInput"
               value={counter.count}
               onChange={(e) => counter.setValue(parseInt(e.target.value, 10))}
-              placeholder="Enter a value"
+              placeholder="1234"
             />
           </div>
 
