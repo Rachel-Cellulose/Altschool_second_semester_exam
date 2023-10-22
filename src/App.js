@@ -16,11 +16,17 @@ function Home() {
         </h2>
 
         <div className="nav-box">
-          <Link to="/error"> Check here for error page</Link>
+          <Link to="/error" style={{ textDecoration: "none" }}>
+            {" "}
+            Check here for error page
+          </Link>
         </div>
 
         <div className="nav-box">
-          <Link to="/CounterApp"> My Counter App</Link>
+          <Link to="/CounterApp" style={{ textDecoration: "none" }} >
+            {" "}
+            My Counter App
+          </Link>
         </div>
       </div>
     </section>
@@ -37,7 +43,7 @@ function Error() {
             <p>Ooops!!!!</p>
             <h2>Sorry, the page you are looking for does not exist.</h2>
             <button>
-              <Link className="Button" to="/">
+              <Link style={{ textDecoration: "none" }}className="Button" to="/">
                 Go back to Home Page
               </Link>
             </button>
@@ -80,13 +86,15 @@ const CounterApp = () => {
   const counter = useCounter(0);
 
   return (
-    <section className="main-container">
-      <div>{/* <h1 className="title">Counter App</h1> */}</div>
-
-      <div>
+    <div className="header" >
         <div className="wrapper">
           <div>
-            <p className="display">Count: {counter.count}</p>
+            <p className="display">
+              Count:{" "}
+              <span className="placeholder">
+                {counter.count ? counter.count : "count now"}
+              </span>
+            </p>
           </div>
 
           <div className="value-container">
@@ -96,27 +104,29 @@ const CounterApp = () => {
               id="countInput"
               value={counter.count}
               onChange={(e) => counter.setValue(parseInt(e.target.value, 10))}
+              placeholder="Enter a value"
             />
           </div>
 
           <div className="increment-container" onClick={counter.increment}>
-            Increment  &#x2B;
+            Increment
           </div>
 
           <div className="decrement-container" onClick={counter.decrement}>
-            Decrement <div>&#x2212;</div>
+            Decrement
           </div>
 
           <div className="reset-container" onClick={counter.reset}>
-            Reset <div>&#8635;</div>
+            Reset
           </div>
 
           <div className="nav-box">
-            <Link to="/"> Back to Home</Link>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              Back to Home
+            </Link>
           </div>
         </div>
-      </div>
-    </section>
+    </div>
   );
 };
 
@@ -129,7 +139,8 @@ function App() {
           <Route path="/error" element={<Error />} />
           <Route path="/CounterApp" element={<CounterApp />} />
           <Route path="*" element={<PageNotFound />} />
-          <Route path="/TestErrorBoundary" element={<PageNotFound />} />{" "}
+          <Route path="/TestErrorBoundary" element={<PageNotFound />} />
+          {" TestErrorBoundary"}
           {/* Include the ErrorBoundaryTest component */}
         </Routes>
       </switch>
