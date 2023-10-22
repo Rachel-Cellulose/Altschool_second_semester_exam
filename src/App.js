@@ -23,7 +23,7 @@ function Home() {
         </div>
 
         <div className="nav-box">
-          <Link to="/CounterApp" style={{ textDecoration: "none" }} >
+          <Link to="/CounterApp" style={{ textDecoration: "none" }}>
             {" "}
             My Counter App
           </Link>
@@ -43,7 +43,11 @@ function Error() {
             <p>Ooops!!!!</p>
             <h2>Sorry, the page you are looking for does not exist.</h2>
             <button>
-              <Link style={{ textDecoration: "none" }}className="Button" to="/">
+              <Link
+                style={{ textDecoration: "none" }}
+                className="Button"
+                to="/"
+              >
                 Go back to Home Page
               </Link>
             </button>
@@ -86,17 +90,16 @@ const CounterApp = () => {
   const counter = useCounter(0);
 
   return (
-    <div className="header" >
-        <div className="wrapper">
-          <div>
-            <p className="display">
-              Count:{" "}
-              <span className="placeholder">
-                {counter.count ? counter.count : "count now"}
-              </span>
-            </p>
-          </div>
+    <div className="header">
+      <div className="wrapper">
+        <p className="display">
+          Count:{" "}
+          <span className="placeholder">
+            {counter.count ? counter.count : "count now"}
+          </span>
+        </p>
 
+        <div className="mid-container">
           <div className="value-container">
             <label htmlFor="countInput">Set value:</label>
             <input
@@ -119,13 +122,13 @@ const CounterApp = () => {
           <div className="reset-container" onClick={counter.reset}>
             Reset
           </div>
-
-          <div className="nav-box">
-            <Link to="/" style={{ textDecoration: "none" }}>
-              Back to Home
-            </Link>
-          </div>
         </div>
+        <div className="nav-box">
+          <Link to="/" style={{ textDecoration: "none" }}>
+            Back to Home
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
