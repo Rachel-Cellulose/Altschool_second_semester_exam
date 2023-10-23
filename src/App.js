@@ -9,7 +9,6 @@ import ErrorBoundaryTest from "./ErrorBoundaryTest";
 function Home() {
   return (
     <section className="home-container">
-      <h1> HOME PAGE </h1>
 
       <div className="info-box">
         <h2>
@@ -106,7 +105,7 @@ const CounterApp = () => {
 
         <div className="mid-container">
           <div className="value-container">
-            <label htmlFor="countInput">alue:</label>
+            <label htmlFor="countInput">Value:</label>
             <input
               type="number"
               id="countInput"
