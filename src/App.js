@@ -3,6 +3,8 @@ import { Link, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import PageNotFound from "./PageNotFound";
 import TestErrorBoundary from "./TestErrorBoundary";
+import Movies from "./Movies";
+import ErrorBoundaryTest from "./ErrorBoundaryTest";
 
 function Home() {
   return (
@@ -27,6 +29,9 @@ function Home() {
             {" "}
             My Counter App
           </Link>
+        </div>
+        <div>
+          <Movies />
         </div>
       </div>
     </section>
@@ -101,13 +106,13 @@ const CounterApp = () => {
 
         <div className="mid-container">
           <div className="value-container">
-            <label htmlFor="countInput">Value:</label>
+            <label htmlFor="countInput">alue:</label>
             <input
               type="number"
               id="countInput"
               value={counter.count}
               onChange={(e) => counter.setValue(parseInt(e.target.value, 10))}
-              placeholder="1234"
+              placeholder="Enter a value"
             />
           </div>
 
@@ -142,6 +147,7 @@ function App() {
           <Route path="/error" element={<Error />} />
           <Route path="/CounterApp" element={<CounterApp />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path="/error-boundary-test" element={<ErrorBoundaryTest />} />
           <Route path="/TestErrorBoundary" element={<PageNotFound />} />
           {" TestErrorBoundary"}
           {/* Include the ErrorBoundaryTest component */}

@@ -1,4 +1,3 @@
-// TestErrorBoundary.js
 import React, { Component } from "react";
 
 class TestErrorBoundary extends Component {
