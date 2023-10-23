@@ -20,9 +20,10 @@ const Movies = () => {
   return (
     <div className="all-movies">
       <h1>Testing ErrorBoundary</h1>
+      {
+      <h3> Click on "kdrama" to see more movie options</h3> }
       <div className="movies">
-        <button onClick={romcom}>RomCom</button>
-        <button onClick={action}>Action</button>
+        
         <button onClick={kdrama}>Kdrama</button>
       </div>
     </div>

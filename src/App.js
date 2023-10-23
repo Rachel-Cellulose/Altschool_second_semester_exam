@@ -150,7 +150,6 @@ function App() {
           <Route path="/error-boundary-test" element={<ErrorBoundaryTest />} />
           <Route path="/TestErrorBoundary" element={<PageNotFound />} />
           {" TestErrorBoundary"}
-          {/* Include the ErrorBoundaryTest component */}
         </Routes>
       </switch>
     </section>

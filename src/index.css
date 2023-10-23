@@ -269,6 +269,33 @@ input {
   text-decoration: none;
 }
 
+.movies button{
+  height: 30px;
+  width: 42%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-style: 6px solid white;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #e7eeed;
+  color: rgb(17, 7, 7);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+  text-decoration: none;
+
+}
+
+.all-movies{
+  background-color: #12695b;
+  border-radius: 10px;
+  color: #a3f5ef;
+}
+
+
 /* Styles for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {
   .wrapper  {

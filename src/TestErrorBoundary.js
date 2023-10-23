@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class TestErrorBoundary extends Component {
   constructor(props) {
@@ -16,7 +17,15 @@ class TestErrorBoundary extends Component {
       throw new Error("This is a simulated error.");
     }
 
-    return <h1>Test Error Boundary</h1>;
+    return (
+      <h1>
+        This is my Test Error Boundary page!!!!!
+        <Link to="/" style={{ textDecoration: "none" }}>
+          Back to Home
+        </Link>
+      </h1>
+    );
+    
   }
 }
 
