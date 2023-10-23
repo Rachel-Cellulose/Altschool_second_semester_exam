@@ -18,12 +18,14 @@ class TestErrorBoundary extends Component {
     }
 
     return (
-      <h1>
-        This is my Test Error Boundary page!!!!!
-        <Link to="/" style={{ textDecoration: "none" }}>
-          Back to Home
-        </Link>
-      </h1>
+      <div>
+        <h1>
+          My Test Error page!
+          <Link to="/" style={{ textDecoration: "none" }} className="nav-box">
+            Back to Home
+          </Link>
+        </h1>
+      </div>
     );
     
   }

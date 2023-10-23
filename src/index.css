@@ -25,6 +25,8 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  
 }
 
 
@@ -287,6 +289,9 @@ input {
   padding-top: 12px;
 }
 
+.empty h1{
+  background-color: #e74c3c;
+}
 
 /* Styles for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {
